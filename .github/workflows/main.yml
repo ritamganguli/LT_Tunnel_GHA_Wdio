@@ -18,6 +18,7 @@ jobs:
           cd wdio
           npm install selenium-webdriver
           npm install webdriverio
+          npm i
 
       - name: Start LambdaTest Tunnel
         id: tunnel
