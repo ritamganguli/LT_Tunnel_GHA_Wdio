@@ -20,7 +20,7 @@ jobs:
           cd wdio
           npm install selenium-webdriver
           npm install webdriverio
-          npm install # This installs other dependencies defined in your package.json
+          npm i # This installs other dependencies defined in your package.json
 
       - name: Start LambdaTest Tunnel
         id: tunnel
