@@ -34,7 +34,7 @@ jobs:
           tunnelName: "test tunnel"
 
         run: |
-          cd test\specs
+          cd tests\specs
           npm run single 
 
       - name: Export Tunnel Logs for debugging
