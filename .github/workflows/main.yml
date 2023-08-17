@@ -34,8 +34,8 @@ jobs:
           tunnelName: "test tunnel"
 
         run: |
-          cd wdio\tests\specs
-          npm run single 
+          cd wdio
+          cd tests 
 
       - name: Export Tunnel Logs for debugging
         uses: actions/upload-artifact@v2
