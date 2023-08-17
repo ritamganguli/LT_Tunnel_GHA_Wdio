@@ -1,4 +1,4 @@
-name: Smart UI Test
+name: Wdio test
 
 on: push
 
