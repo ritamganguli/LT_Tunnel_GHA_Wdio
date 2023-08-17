@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: 12
       - run: |
+          cd wdio
           npm install selenium-webdriver
           npm install webdriverio
 
@@ -33,6 +34,7 @@ jobs:
           tunnelName: "test tunnel"
 
         run: |
+          cd tests\specs
           npm run single 
 
       - name: Export Tunnel Logs for debugging
