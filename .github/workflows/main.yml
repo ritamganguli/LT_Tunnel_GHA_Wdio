@@ -35,7 +35,8 @@ jobs:
 
         run: |
           cd wdio
-          cd tests 
+          cd tests
+          cd specs
 
       - name: Export Tunnel Logs for debugging
         uses: actions/upload-artifact@v2
