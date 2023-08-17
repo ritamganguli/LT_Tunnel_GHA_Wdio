@@ -37,6 +37,8 @@ jobs:
           cd wdio
           cd tests
           cd specs
+          npm i
+          npm run single
 
       - name: Export Tunnel Logs for debugging
         uses: actions/upload-artifact@v2
