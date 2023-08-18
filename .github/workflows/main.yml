@@ -31,5 +31,4 @@ jobs:
            npm install selenium-webdriver
           npm install wdio
           npm install webdriverio
-          npm audit fix --force
           npm run single
