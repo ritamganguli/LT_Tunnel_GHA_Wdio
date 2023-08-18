@@ -8,41 +8,28 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
       - name: Install Node Dependency
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 18.16.0
+          node-version: 18
       - run: |
           cd wdio
           npm install selenium-webdriver
           npm install webdriverio
-          npm i
-
-      - name: Start LambdaTest Tunnel
-        id: tunnel
-        uses: ./ # Uses an action in the root directory
-        with:
-          user: ${{ secrets.LT_EMAIL }}
-          accessKey: ${{ secrets.LT_ACCESS_KEY }}
-          tunnelName: "test tunnel"
+          npm install
 
       - name: Run Test Case
         env:
           username: ${{ secrets.LT_USERNAME }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
-          tunnelName: "test tunnel"
 
         run: |
           cd wdio
-          npm i
+          npm install
+          npm audit fix --force
           cd tests
           cd specs
           npm run single
 
-      - name: Export Tunnel Logs for debugging
-        uses: actions/upload-artifact@v2
-        with:
-          name: tunnel_logs
-          path: ${{ steps.tunnel.outputs.logFileName }}
