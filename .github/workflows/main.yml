@@ -33,5 +33,4 @@ jobs:
           npm audit fix --force
           cd node_modules
           cd .bin
-          cd wdio
 
