@@ -27,7 +27,8 @@ jobs:
 
         run: |
           cd wdio
-          npm i
+          npm install
+          npm audit --fix
           cd tests
           cd specs
           npm run single
