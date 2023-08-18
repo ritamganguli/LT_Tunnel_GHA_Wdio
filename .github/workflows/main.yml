@@ -21,6 +21,7 @@ jobs:
           npm install
 
       - name: Run Test Case
+        shell: bash
         env:
           username: ${{ secrets.LT_USERNAME }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
