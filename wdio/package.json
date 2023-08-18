@@ -8,7 +8,8 @@
     "single": "node_modules\\.bin\\wdio conf\\single.conf.js",
     "parallel": "./node_modules/.bin/wdio conf/parallel.conf.js",
     "local": "./node_modules/.bin/wdio conf/local.conf.js",
-    "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js"
+    "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js",
+    "wdio:single":"wdio conf\\single.conf.js"
   },
   "repository": {
     "type": "git",
