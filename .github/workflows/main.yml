@@ -33,5 +33,5 @@ jobs:
           npm audit fix --force
           cd tests
           cd specs
-          npm run test:single
+          npm run single
 
