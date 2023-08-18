@@ -30,7 +30,6 @@ jobs:
           npm install
           npm install @wdio/cli -g
           npm install webdriverio
-          npm i --save-dev @wdio/cl
           npm audit fix --force
           cd tests
           cd specs
