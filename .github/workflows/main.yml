@@ -4,7 +4,7 @@ on: push
 
 jobs:
   test-tunnel:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
@@ -13,7 +13,7 @@ jobs:
       - name: Install Node Dependency
         uses: actions/setup-node@v1
         with:
-          node-version: 18
+          node-version: 18.16.0
       - run: |
           cd wdio
           npm install selenium-webdriver
