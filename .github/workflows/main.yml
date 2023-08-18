@@ -31,7 +31,7 @@ jobs:
           npm install @wdio/cli -g
           npm install webdriverio
           npm audit fix --force
-          cd tests
-          cd specs
-          npm run single
+          cd node_modules
+          cd .bin
+          cd wdio
 
