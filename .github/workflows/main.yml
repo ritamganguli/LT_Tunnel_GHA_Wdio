@@ -28,7 +28,4 @@ jobs:
         run: |
           cd wdio
           npm install
-           npm install selenium-webdriver
-          npm install wdio
-          npm install webdriverio
           npm run single
