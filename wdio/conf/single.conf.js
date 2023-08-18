@@ -14,7 +14,7 @@ services: [
     ]
   ],
   updateJob: false,
-  specs: ["./wdio/tests/specs/single_test.js"],
+  specs: ["./tests/specs/single_test.js"],
   exclude: [],
   capabilities: [
     {
