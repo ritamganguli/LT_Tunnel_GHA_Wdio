@@ -20,19 +20,10 @@ jobs:
           npm install webdriverio
           npm i
 
-      - name: Start LambdaTest Tunnel
-        id: tunnel
-        uses: ./ # Uses an action in the root directory
-        with:
-          user: ${{ secrets.LT_EMAIL }}
-          accessKey: ${{ secrets.LT_ACCESS_KEY }}
-          tunnelName: "test tunnel"
-
       - name: Run Test Case
         env:
           username: ${{ secrets.LT_USERNAME }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
-          tunnelName: "test tunnel"
 
         run: |
           cd wdio
@@ -41,8 +32,3 @@ jobs:
           cd specs
           npm run test
 
-      - name: Export Tunnel Logs for debugging
-        uses: actions/upload-artifact@v2
-        with:
-          name: tunnel_logs
-          path: ${{ steps.tunnel.outputs.logFileName }}
