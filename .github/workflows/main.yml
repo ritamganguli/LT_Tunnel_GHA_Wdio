@@ -29,7 +29,8 @@ jobs:
           cd wdio
           npm install
           npm install @wdio/cli -g
-          npx wdio run wdio.conf.js
+          cd conf
+          npx wdio run single.conf.js
           npm audit fix --force
           cd tests
           cd specs
