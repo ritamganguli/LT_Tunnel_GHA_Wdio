@@ -28,6 +28,7 @@ jobs:
         run: |
           cd wdio
           npm install
+          npm install @wdio/cli
           npm audit fix --force
           cd tests
           cd specs
