@@ -39,7 +39,7 @@ jobs:
           npm i
           cd tests
           cd specs
-          npm run single
+          npm run test
 
       - name: Export Tunnel Logs for debugging
         uses: actions/upload-artifact@v2
