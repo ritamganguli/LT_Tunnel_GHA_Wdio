@@ -25,4 +25,4 @@ jobs:
         run: |
           cd wdio
           npm install
-          npm run single
+          npm run single wdio/conf/single.conf.js
