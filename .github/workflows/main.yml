@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Install Node Dependency
         uses: actions/setup-node@v1
@@ -22,10 +22,6 @@ jobs:
           npm install
 
       - name: Run Test Case
-        env:
-          username: ${{ secrets.LT_USERNAME }}
-          accessKey: ${{ secrets.LT_ACCESS_KEY }}
-
         run: |
           cd wdio
           npm install
