@@ -43,4 +43,4 @@ jobs:
       - name: run test
         run: |
           cd web_io
-          npm sun single
+          npm run single
