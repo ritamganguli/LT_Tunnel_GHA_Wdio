@@ -12,8 +12,8 @@ jobs:
 
 
     env:
-      LT_USERNAME: "shubhamr"
-      LT_ACCESS_KEY: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
+      LT_USERNAME: "ritamg"
+      LT_ACCESS_KEY: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
 
     steps:
       - name: Checkout Repository
