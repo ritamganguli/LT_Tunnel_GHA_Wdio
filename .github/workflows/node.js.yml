@@ -15,8 +15,8 @@ jobs:
         node-version: [16.x]
         
     env:
-      LT_USERNAME: "shubhamr"  # Set your desired environment variable here
-      LT_ACCESS_KEY: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
+      LT_USERNAME: "ritamg"  # Set your desired environment variable here
+      LT_ACCESS_KEY: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
 
     steps:
     - uses: actions/checkout@v2
@@ -25,8 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install selenium-webdriver 
-    - run: npm install webdriverio
-    - run: npm i
-    - run: npm install
-    - run: npm run single
+    - run: |
+        cd web_io
+        npm install selenium-webdriver 
+        npm install webdriverio
+        npm i
+        npm install
+        npm run single
