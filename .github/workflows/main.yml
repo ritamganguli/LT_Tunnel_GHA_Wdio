@@ -1,46 +1,34 @@
-name: Selenium Tests
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - main  # Trigger the workflow on pushes to the 'main' branch
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
-  selenium_tests:
-    name: Selenium Tests Job
+  build:
     runs-on: ubuntu-latest
 
-
+    strategy:
+      matrix:
+        node-version: [16.x]
+        
     env:
-      LT_USERNAME: "ritamg"
+      LT_USERNAME: "ritamg"  # Set your desired environment variable here
       LT_ACCESS_KEY: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Display Node.js version
-        run: node -v
-
-    
-
-      - name: Install Selenium Webdriver
-        run: npm install selenium-webdriver
-
-      - name: Install WebdriverIO
-        run: |
-          cd web_io
-          npm install webdriverio
-
-      - name: run test
-        run: |
-          cd web_io
-          npm run single
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: |
+        cd web_io
+        npm install selenium-webdriver 
+        npm install webdriverio
+        npm i
+        npm install
+        npm run single
