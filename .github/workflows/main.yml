@@ -36,7 +36,11 @@ jobs:
         run: npm install selenium-webdriver
 
       - name: Install WebdriverIO
-        run: npm install webdriverio
+        run: |
+          cd web_io
+          npm install webdriverio
 
       - name: run test
-        run: npm sun single
+        run: |
+          cd web_io
+          npm sun single
