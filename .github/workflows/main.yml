@@ -1,37 +1,42 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: webdriverio-ci
+name: Selenium Tests
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main  # Trigger the workflow on pushes to the 'main' branch
 
 jobs:
-  test:
-
+  selenium_tests:
+    name: Selenium Tests Job
     runs-on: ubuntu-latest
 
+
+    env:
+      LT_USERNAME: "shubhamr"
+      LT_ACCESS_KEY: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
+
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 16.3.0
-        - name: Install
-          run: npm install
-        - name: Test
-          run: |
-            cd wdio
-            npm init -y
-            npm i --save-dev @wdio/cli
-            npx wdio config -y
-            mkdir .\conf 
-            npx wdio single.conf.js
-        - uses: actions/upload-artifact@v1
-          if: failure()
-          with:
-            name: logs
-            path: logs
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Display Node.js version
+        run: node -v
+
+    
+
+      - name: Install Selenium Webdriver
+        run: npm install selenium-webdriver
+
+      - name: Install WebdriverIO
+        run: npm install webdriverio
+
+      - name: run test
+        run: npm sun single
