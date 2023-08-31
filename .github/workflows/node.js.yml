@@ -39,7 +39,6 @@ jobs:
     - run: |
         cd web_io
         cd webdriverio-selenium-master
-        npm install selenium-webdriver 
         npm install webdriverio
         npm i
         npm install
