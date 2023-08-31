@@ -42,4 +42,5 @@ jobs:
         npm install webdriverio
         npm i
         npm install
-        npm run single
+        npm run single &
+        npm run parallel
