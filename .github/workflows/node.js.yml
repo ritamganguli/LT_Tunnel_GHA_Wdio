@@ -37,7 +37,7 @@ jobs:
         tunnelName: "test-tunnel-${{ github.run_number }}"
         verbose: true
     - run: |
-        cd wdio_2
+        cd web_io
         cd webdriverio-selenium-master
         npm install selenium-webdriver 
         npm install webdriverio
