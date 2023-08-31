@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -37,10 +37,14 @@ jobs:
         tunnelName: "test-tunnel-${{ github.run_number }}"
         verbose: true
     - run: |
-        cd web_io
+        cd wdio_2
+        cd webdriverio-selenium-master
         npm install selenium-webdriver 
         npm install webdriverio
         npm i
         npm install
         LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG &
         npm run single
+       
+        
+        
