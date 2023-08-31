@@ -1,13 +1,15 @@
 exports.config = {
-  user: "ritamg",
-  key: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG",
-  logFile : './logDir/api.log',
   services: [
-      ['lambdatest', {
-          tunnel: true
-      }]
-    ],
-
+    [
+      "lambdatest",
+      {
+        tunnel: true,
+        lambdatestOpts: {
+          logFile: "tunnel.log"
+        }
+      }
+    ]
+  ],
   updateJob: false,
   specs: ["./tests/specs/single_test._1.js"],
   exclude: [],
