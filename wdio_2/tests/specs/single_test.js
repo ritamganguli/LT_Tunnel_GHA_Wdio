@@ -1,25 +1,15 @@
-var assert = require('assert');
+const assert = require('assert');
 
-global.pageText = '';
-
-describe('Lambdatest Demo Test', function() {
-  it('Lambdatest Demo TestCase', async function () {
-    for (var j = 0; j < 2; j++) {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Test logic
-      await browser.url('https://www.lambdatest.com/blog/');
-      const heading = await browser.$('h1');
-      const headingValue = await heading.getText();
-      console.log('Heading-Ritam:', headingValue);
-      global.pageText = headingValue;
-      module.exports.headingValue = headingValue;
-    }
+describe('Google Search Function', () => {
+  it('can find search results', async () => {
+    await browser.url('https://www.google.co.in/');
+    const prompt = await $('[id="L2AGLb"]'); // consent popup is coming for other location which needs to be accepted to proceed
+    if(prompt.elementId)
+      await prompt.click();
+    const input = await $('[name="q"]');
+    await input.setValue('test123');
+    const title = await browser.getTitle();
+    await browser.pause(10000);
+    assert.equal(title, 'Google');
   });
 });
-
-
-module.exports = {pageText};
-
-
-
