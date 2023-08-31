@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: win
+    runs-on: windows-latest 
 
     strategy:
       matrix:
