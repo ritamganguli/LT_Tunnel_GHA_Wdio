@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubantu-latest
 
     strategy:
       matrix:
@@ -27,6 +27,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Start LambdaTest Tunnel
+      id: tunnel
+      uses: ./ # Uses an action in the root directory
+      with:
+        user: "ritamg"
+        accessKey: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
+        basicAuth: ${{ secrets.LT_BASIC_AUTH }}
+        tunnelName: "test-tunnel-${{ github.run_number }}"
+        verbose: true
     - run: |
         cd web_io
         npm install selenium-webdriver 
