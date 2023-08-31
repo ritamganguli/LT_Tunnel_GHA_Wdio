@@ -41,6 +41,7 @@ jobs:
         npm install selenium-webdriver 
         npm install webdriverio
         npm i
+        npm i
         npm install
         LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG &
         npm run single
