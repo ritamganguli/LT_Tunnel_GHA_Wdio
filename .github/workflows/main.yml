@@ -38,20 +38,14 @@ jobs:
         verbose: true
     - run: |
         cd wdio
-        LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG
-  parallel-job-1:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Step 1 in Parallel Job 1
-    - run: |
-        cd wdio_2
         chmod +x ./node_modules/.bin/wdio
         npm install selenium-webdriver 
         npm install webdriverio
         npm i
         npm install
+        LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG &
         npm run single
+
 
 
         
