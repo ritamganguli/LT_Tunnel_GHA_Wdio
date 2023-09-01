@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Wdio_2 Runner
 
 on:
   push:
