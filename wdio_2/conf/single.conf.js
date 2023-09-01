@@ -63,7 +63,6 @@ exports.config = {
       video: true,
       console: false,
       network: false,
-      tunnel:true,
     },
   ],
 
