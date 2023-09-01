@@ -1,0 +1,33 @@
+{"level":"info","time":"2023-09-01T12:34:04.467+0530","caller":"cmd/lt.go:183","msg":"LambdaTest Tunnel version: 3.1.31"}
+{"level":"debug","time":"2023-09-01T12:34:04.468+0530","caller":"core/lifecycle.go:41","msg":"Starting pipeline....."}
+{"level":"debug","time":"2023-09-01T12:34:04.468+0530","caller":"core/lifecycle.go:42","msg":"OS: windows, Arch: amd64"}
+{"level":"debug","time":"2023-09-01T12:34:04.468+0530","caller":"core/lifecycle.go:43","msg":"Fetching config"}
+{"level":"warn","time":"2023-09-01T12:34:04.468+0530","caller":"configmanager/setup.go:79","msg":"Tunnel Name was not specified, using: 11ef6344-16a1-4779-8cce-272137050e26"}
+{"level":"debug","time":"2023-09-01T12:34:04.468+0530","caller":"core/lifecycle.go:65","msg":"Starting tunnel With flags: --user ritamg@lambdatest.com --key *****"}
+{"level":"debug","time":"2023-09-01T12:34:05.143+0530","caller":"core/lifecycle.go:83","msg":"Remote config fetched"}
+{"level":"debug","time":"2023-09-01T12:34:05.192+0530","caller":"custom/setup.go:750","msg":"Starting sink proxy"}
+{"level":"debug","time":"2023-09-01T12:34:05.192+0530","caller":"networkscanner/setup.go:97","msg":"Trying on port 443"}
+{"level":"debug","time":"2023-09-01T12:34:05.192+0530","caller":"networkscanner/setup.go:131","msg":"Trying over ssh over ws"}
+{"level":"debug","time":"2023-09-01T12:34:05.192+0530","caller":"networkscanner/setup.go:63","msg":"Trying on port 22"}
+{"level":"info","time":"2023-09-01T12:34:05.249+0530","caller":"custom/setup.go:697","msg":"Tunnel binary started on port :9090"}
+{"level":"debug","time":"2023-09-01T12:34:05.431+0530","caller":"networkscanner/setup.go:148","msg":"WSS connection was successful"}
+{"level":"debug","time":"2023-09-01T12:34:06.901+0530","caller":"networkscanner/setup.go:118","msg":"SSH connection over port 443 successful"}
+{"level":"debug","time":"2023-09-01T12:34:07.006+0530","caller":"networkscanner/setup.go:173","msg":"SSH connection over ws successful"}
+{"level":"debug","time":"2023-09-01T12:34:07.027+0530","caller":"networkscanner/setup.go:84","msg":"SSH connection over port 22 successful"}
+{"level":"info","time":"2023-09-01T12:34:07.027+0530","caller":"core/lifecycle.go:120","msg":"Using ssh(over_22) :: connection mode"}
+{"level":"info","time":"2023-09-01T12:34:07.028+0530","caller":"core/lifecycle.go:250","msg":"Launching tunnel"}
+{"level":"debug","time":"2023-09-01T12:34:07.028+0530","caller":"ws/control.go:34","msg":"Starting control ws connection at wss://ts.lambdatest.com/monitor"}
+{"level":"debug","time":"2023-09-01T12:34:07.691+0530","caller":"ws/control.go:72","msg":"Control ws channel opened"}
+{"level":"debug","time":"2023-09-01T12:34:07.692+0530","caller":"ws/control.go:131","msg":"Starting message listener on control connection"}
+{"level":"debug","time":"2023-09-01T12:34:09.206+0530","caller":"core/lifecycle.go:322","msg":"Sending tunnel registered message to channels"}
+{"level":"debug","time":"2023-09-01T12:34:09.206+0530","caller":"ws/control.go:196","msg":"Tunnel registered message received on control channel"}
+{"level":"debug","time":"2023-09-01T12:34:09.206+0530","caller":"ws/control.go:200","msg":"controller bus registered"}
+{"level":"debug","time":"2023-09-01T12:34:09.206+0530","caller":"ssh/setup.go:71","msg":"Using 5 ssh connection"}
+{"level":"debug","time":"2023-09-01T12:34:10.443+0530","caller":"ssh/ssh.go:216","msg":"Successfully started sshd listener on port: 24869"}
+{"level":"debug","time":"2023-09-01T12:34:10.490+0530","caller":"ssh/ssh.go:216","msg":"Successfully started sshd listener on port: 27377"}
+{"level":"info","time":"2023-09-01T12:34:10.490+0530","caller":"core/lifecycle.go:336","msg":"You can start testing now"}
+{"level":"info","time":"2023-09-01T12:34:10.490+0530","caller":"core/lifecycle.go:337","msg":"Tunnel ID: 4601181"}
+{"level":"debug","time":"2023-09-01T12:34:10.491+0530","caller":"core/lifecycle.go:338","msg":"Remote Listener Started on Port 14735"}
+{"level":"debug","time":"2023-09-01T12:34:10.492+0530","caller":"ssh/ssh.go:216","msg":"Successfully started sshd listener on port: 2479"}
+{"level":"debug","time":"2023-09-01T12:34:10.640+0530","caller":"ssh/ssh.go:216","msg":"Successfully started sshd listener on port: 11459"}
+{"level":"debug","time":"2023-09-01T12:34:10.646+0530","caller":"ssh/ssh.go:216","msg":"Successfully started sshd listener on port: 29850"}
