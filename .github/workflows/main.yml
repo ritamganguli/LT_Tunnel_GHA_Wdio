@@ -37,6 +37,14 @@ jobs:
         tunnelName: "test-tunnel-${{ github.run_number }}"
         verbose: true
     - run: |
+        cd wdio
+        LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG
+  parallel-job-1:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Step 1 in Parallel Job 1
+    - run: |
         cd wdio_2
         chmod +x ./node_modules/.bin/wdio
         npm install selenium-webdriver 
@@ -44,6 +52,7 @@ jobs:
         npm i
         npm install
         npm run single
-       
+
+
         
         
