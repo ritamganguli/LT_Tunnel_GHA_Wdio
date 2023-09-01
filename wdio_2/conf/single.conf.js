@@ -1,7 +1,7 @@
 exports.config = {
   user: "ritamg",
   key: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG",
-  logFile : './logDir/api.log',
+  logFile : 'logFile: "tunnel.log"',
   services: [
       ['lambdatest', {
           tunnel: true
@@ -23,7 +23,6 @@ exports.config = {
       video: true,
       console: false,
       network: false,
-      tunnel:true,
     },
   ],
 
@@ -64,7 +63,6 @@ exports.config = {
       video: true,
       console: false,
       network: false,
-      tunnel:true,
     },
   ],
 
