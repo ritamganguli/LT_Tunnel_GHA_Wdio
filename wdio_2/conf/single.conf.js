@@ -1,6 +1,6 @@
 exports.config = {
-  user: "ritamg",
-  key: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG",
+  user: "shubhamr",
+  key: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh",
   logFile : 'logFile: "tunnel.log"',
   services: [
       ['lambdatest', {
