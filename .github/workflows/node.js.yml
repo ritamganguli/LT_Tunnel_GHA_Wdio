@@ -1,4 +1,4 @@
-name: Wdio_2 Runner
+name: Wdio_2
 
 on:
   push:
