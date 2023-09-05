@@ -17,8 +17,8 @@ jobs:
         node-version: [16.x]
         
     env:
-      LT_USERNAME: "ritamg"
-      LT_ACCESS_KEY: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
+      LT_USERNAME: "pata_nahi"
+      LT_ACCESS_KEY: "nahi_batunga"
 
     steps:
     - uses: actions/checkout@v2
