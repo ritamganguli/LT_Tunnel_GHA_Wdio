@@ -1,12 +1,8 @@
-name: Wdio_2 Runner
-
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour at the beginning of the hour
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -17,8 +13,8 @@ jobs:
         node-version: [16.x]
         
     env:
-      LT_USERNAME: "pata_nahi"
-      LT_ACCESS_KEY: "nahi_batunga"
+      LT_USERNAME: "shubhamr"  # Set your desired environment variable here
+      LT_ACCESS_KEY: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
 
     steps:
     - uses: actions/checkout@v2
@@ -27,21 +23,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Start LambdaTest Tunnel
-      id: tunnel
-      uses: ./ # Uses an action in the root directory
-      with:
-        user: "ritamg"
-        accessKey: "lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG"
-        basicAuth: ${{ secrets.LT_BASIC_AUTH }}
-        tunnelName: "test-tunnel-${{ github.run_number }}"
-        verbose: true
     - run: |
-        cd wdio_2
-        chmod +x ./node_modules/.bin/wdio
-        npm install selenium-webdriver 
-        npm install webdriverio
-        npm i
-        npm install
-        LT --user ritamg@lambdatest.com --key lHWNSA0QECwjeN8DoDb9U6KyXMBgAFXqlIIArkxeOTDSeEdLyG &
-        npm run single
+          cd web_io
+          npm install selenium-webdriver 
+          npm install webdriverio
+          npm i
+          npm install
+          npm i wdio-lambdatest-service --save-dev
+          npm run single
