@@ -24,6 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: |
+          echo "Hello"
           cd web_io
           npm install selenium-webdriver 
           npm install webdriverio
