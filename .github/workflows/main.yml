@@ -33,5 +33,6 @@ jobs:
           npm i wdio-lambdatest-service --save-dev
           ls -la
           npm run single
-          ls -la
+          cat *.log
+          
         
