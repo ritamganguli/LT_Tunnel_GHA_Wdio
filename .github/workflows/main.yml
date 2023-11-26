@@ -13,8 +13,8 @@ jobs:
         node-version: [16.x]
         
     env:
-      LT_USERNAME: "shubhamr"  # Set your desired environment variable here
-      LT_ACCESS_KEY: "dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
+      LT_USERNAME: "ritamg"  # Set your desired environment variable here
+      LT_ACCESS_KEY: "TK7DCf2rFcBJzT3IHz4kD47lThhsHckrlGtiGkYyetAcixtrj5"
 
     steps:
     - uses: actions/checkout@v2
